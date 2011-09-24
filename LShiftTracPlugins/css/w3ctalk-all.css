@@ -1,0 +1,296 @@
+p.signature, p.frame {
+  display: none;
+}
+
+body {
+  margin: 0 4%;
+  color: #000 !important;
+  background: #fff;
+  font-size: medium;
+  /* line-height: 1.1; */
+  font-family: Arial, "Helvetica narrow", helvetica, verdana, trebuchet, sans-serif;
+  max-width: 50em;
+}
+table, tbody, thead, tfoot, tr, td, th {
+  /* Repeat font size for broken browsers that don't inherit into tables.
+     This rule is wrong,obviously, since it may change the cascading
+     order, but as long as other style rules are imported *after*
+     this one, it should not cause problems. */
+  font-size: 1em;
+}
+p {
+  margin: 1.2em 0 0 0;
+}
+div.slidebody {
+  margin: 0;
+  min-height: 490px;
+  overflow: auto;
+}
+small {
+  font-size: 90%;
+}
+big {
+  font-size: 120%;
+}
+img {
+  border: 0;
+}
+
+code {
+  color: #4a5;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+a:link, a:visited {
+  font-style: italic;
+  text-decoration: underline;
+  color: #000; /* for browsers that don't understand 'inherit' */
+}
+@media all {			/* Protect from NS4 */
+  a:link, a:visited {color: inherit}
+}
+a:active  { color: red }
+a.offsite { color: #291 }
+
+p.author  { 
+  font-size: 80%;
+  font-style: italic;
+}
+
+p.index {
+  font-size: 80%;
+  color: black;
+}
+
+p.top { 
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #224;
+}
+
+blockquote span.attribution {
+  font-style: normal;
+  font-weight: bold;
+}
+
+ul, ol {
+  margin-left: 1em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  font-size: 90%;
+}
+
+dl p, ul p, ol p,
+dl ol, dl ul, dl dl,
+ol ol, ol dl, ol ul,
+ul dl, ul ol, ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+pre, tt, code { 
+  color: #4a5;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+pre { 
+  font-size: 1em;		/* Redundant, but fixes bug in Opera 3.5 */
+  margin-left: 3%;
+  margin-right: 20px;
+}
+
+/* Inside PRE, use SPAN.keyword, SPAN.comment and SPAN.string to
+highlight features of code */
+
+pre span.keyword, code span.keyword {
+  color: #066; /* dark green-blue */
+}
+
+pre span.comment, code span.comment {
+  color: #606; /* dark purple */
+  font-weight: normal;
+  font-style: italic;
+}
+
+pre span.string, code span.string {
+  color: #660; /* olive */
+}
+
+pre.extensive, pre.compact { 
+  font-size: 80%;
+}
+
+hr { 
+  margin-top: 0.2em;
+  color: black;
+}
+
+hr.top {
+  margin-bottom: 0.4em;
+}
+
+hr.bottom {
+  margin-top: 0.4em;
+  clear: both;
+}
+
+h1 {
+  color: #0c479d /* #005A98 */;
+  font-size: 120%;
+  font-weight: bold;
+  clear: both;
+  margin-top: 2em;
+  border-top: double black;
+  padding-top: 2em;
+}
+h1:first-child {
+  padding-top: 0;
+  border-top: none
+}
+@media screen, print {
+  h1 {
+    counter-increment: h1;
+  }
+  h1::before {
+    content: "slide\A" counter(h1);
+    white-space: pre;
+    float: right;
+    font-size: 0.7em;
+    text-align: center;
+  }
+}
+
+h1.slide { 
+  /* font-size: 30px;	/* Workaround, the 120% above should've been enough */
+  margin-top: 0.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+h1.slidelist {
+  font-size: 80%;
+}
+
+h2 {
+  color: black;
+  font-size: 100%;
+}
+
+h3 {
+  color: black;
+  font-size: 80%;
+}  
+
+h4 {
+  color: black;
+  font-size: 70%;
+}
+
+h2.cover {
+  margin-top: 3em;
+  margin-left: 1.5em;
+  margin-right: 1.5em
+}
+
+h3.cover {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+h2.subtitle {  /* A subtitle under an H1 */
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 0;
+  color: #0c479d
+}
+
+.selector { color: #933 }
+.property { color: #339 }
+.value { color: #399 }
+
+/* DIV.comment is used in the all.htm file for comments that will not
+be shown on the slides themselves. This rule is for when the style
+sheet is applied to the all.htm file */
+
+div.comment {
+  font: medium serif;
+  padding: 1em;
+  border: thin dotted;
+  margin: 3em 0;
+  text-align: justify;
+  clear: both;
+  background: #CCC;
+}
+div.comment em, div.comment code, div.comment pre, div.comment tt {
+  /*color: white;*/
+}
+div.comment ul, div.comment ol {
+  font-size: 100%;
+}
+table.navbar {
+  line-height: 1px;		/* Avoid space above small icons */
+}
+
+/* If there is a div.slide (as for b5.css), put a border around it */
+div.slide {
+  position: relative;
+  min-height: 18em;
+  padding: 2em;
+  border: thick solid #ADE;
+  overflow: auto;
+  margin: 2em auto 1em auto;
+  width: 30em;
+}
+div.slide > h1 {
+  margin-top: 0;
+}
+
+/* If there is a div.slide, then div.comment doesn't get a background */
+div.slide ~ div.comment {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* div.callout is used in b5.css for something that needs extra attention */
+div.callout {
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #ADE;
+}
+div.callout > *:first-child {
+  margin-top: 0;
+}
+
+/* div.sidebar is used in b5.css for a box on the right */
+div.sidebar {
+  float: right;
+  clear: right;
+  width: 30%;
+  margin: 0 0 0.5em 1em;
+  padding: 0.5em;
+  border: solid #0c479d;
+  color: #0c479d;
+}
+div.sidebar > *:first-child {
+  margin-top: 0;
+}
+
+/* p.progress shows how far along in the talk a slide is, see, e.g., b5.css */
+@media braille, embossed, handheld, print, screen, speech, tty, tv {
+  p.progress {display: none}
+}
+
+/* Two sibling elements with class "col" will be displayed as columns
+  side by side. */
+.col {float: left; width: 45%; margin: 1em 5% 0 0}
+.col + .col {margin: 1em 0 0 5%}
+.col > *:first-child {argin-top: 0}
+.col + .col + * {clear: left}

@@ -1,0 +1,221 @@
+body {
+  margin: 0 4%;
+  color: #000;
+  background: #fff;
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: Arial, "Helvetica narrow", helvetica, verdana, trebuchet, sans-serif;
+  text-shadow: 0 0 3px #fff; /* Keeps text readable against a dark background */
+}
+.veryshort {font-size: 200%}	/* Keep slides short and use this class! */
+.short {font-size: 150%}
+.long {font-size: 90%}
+.verylong {font-size: 80%}	/* Only use if you *must* have lots of text! */
+
+table, tbody, thead, tfoot, tr, td, th {
+  /* Repeat font size for broken browsers that don't inherit into tables.
+     This rule is wrong,obviously, since it may change the cascading
+     order, but as long as other style rules are imported *after*
+     this one, it should not cause problems. */
+  font-size: 1em;
+}
+div.slidebody {
+  margin: 0;
+  min-height: 425px;
+  /* overflow: auto; */
+}
+small {
+  font-size: 90%;
+}
+big {
+  font-size: 120%;
+}
+img {
+  border: 0;
+}
+
+code {
+  color: #4a5;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+a:link, a:visited {
+  font-style: italic;
+  text-decoration: underline;
+  color: #000; /* for browsers that don't understand 'inherit' */
+}
+@media all {			/* Protect from NS4 */
+  a:link, a:visited {color: inherit}
+}
+a:active  { color: red }
+a.offsite { color: #291 }
+
+p.author  { 
+  font-size: 80%;
+  font-style: italic;
+}
+
+p.index {
+  font-size: 80%;
+  color: black;
+}
+
+p.top { 
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #224;
+}
+
+blockquote span.attribution {
+  font-style: normal;
+  font-weight: bold;
+}
+
+ul, ol {
+  margin-left: 1em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  font-size: 90%;
+}
+
+dl p, ul p, ol p,
+dl ol, dl ul, dl dl,
+ol ol, ol dl, ol ul,
+ul dl, ul ol, ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+pre, tt, code { 
+  color: #283 /* #4a5 */;
+  font-weight: bold;
+  font-family: "Courier New", courier, monospace;
+}
+pre { 
+  font-size: 1em;		/* Redundant, but fixes bug in Opera 3.5 */
+  margin-left: 3%;
+  margin-right: 20px;
+}
+
+/* Inside PRE, use SPAN.keyword, SPAN.comment and SPAN.string to
+highlight features of code */
+
+pre span.keyword, code span.keyword {
+  color: #066; /* dark green-blue */
+}
+
+pre span.comment, code span.comment {
+  color: #606; /* dark purple */
+  font-weight: normal;
+  font-style: italic;
+}
+
+pre span.string, code span.string {
+  color: #660; /* olive */
+}
+
+pre span.attribute, code span.attribute {
+  color: #960; /* brown */
+}
+
+pre.extensive, pre.compact { 
+  font-size: 80%;
+}
+
+hr { 
+  margin-top: 0.2em;
+  color: black;
+}
+
+hr.top {
+  margin-bottom: 0.4em;
+}
+
+hr.bottom {
+  margin-top: 0.4em;
+  clear: both;
+}
+
+h1 {
+  color: #0c479d /* #005A98 */;
+  font-size: 120%;
+  text-shadow: 3px 3px 3px #000;
+}
+
+h1.slide { 
+  font-size: 48px;	/* Workaround, the 120% above should've been enough */
+  margin-top: 0.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+h1.slidelist {
+  font-size: 80%;
+}
+
+h2 {
+  color: black;
+  font-size: 100%;
+}
+
+h3 {
+  color: black;
+  font-size: 80%;
+}  
+
+h4 {
+  color: black;
+  font-size: 70%;
+}
+
+h2.cover {
+  margin-top: 3em;
+  margin-left: 1.5em;
+  margin-right: 1.5em
+}
+
+h3.cover {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+h2.subtitle {  /* A subtitle under an H1 */
+  font-style: italic;
+  font-weight: normal;
+  margin-top: 0;
+  color: #0c479d
+}
+
+.selector { color: #933 }
+.property { color: #339 }
+.value { color: #399 }
+
+/* DIV.comment is used in the all.htm file for comments that will not
+be shown on the slides themselves. This rule is for when the style
+sheet is applied to the all.htm file */
+
+div.comment {
+  font-size: medium;
+  font-family: serif;
+  padding: 1em;
+  border: thin dotted;
+  margin: 3em 3%;
+  text-align: justify;
+  clear: both;
+}
+div.comment em, div.comment code, div.comment pre, div.comment tt {
+  /*color: white;*/
+}
+div.comment ul, div.comment ol {
+  font-size: 100%;
+}
+table.navbar {
+  line-height: 1px;		/* Avoid space above small icons */
+}

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-US">
+<head>
+  <title>HTML Slidy Presentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="Copyright © 2000-11 LShift Ltd" />
+  <meta name="duration"  content="12" />
+  <meta name="font-size-adjustment" content="-2" />
+  <link rel="stylesheet" href="css/slidy.css" type="text/css" />
+  <link rel="stylesheet" href="css/w3c-blue.css" type="text/css" />
+  <script src="js/slidy.js" charset="utf-8" type="text/javascript">
+</script>
+</head>
+
+<body>
+  <div class="background">
+    <img alt="" id="head-icon" src="" name="head-icon" />
+    <object id="head-logo" data="img/logo.svg" type="image/svg+xml" title="logo">
+    <a href="http://www.lshift.net">
+        <img alt="logo" id="head-logo-fallback" src="img/logo.png" name="head-logo-fallback" />
+    </a>
+    </object>
+  </div>
+
+  <div class="slide cover title">
+    <!-- hidden style graphics to ensure they are saved with other content -->
+    <img class="hidden" src="img/bullet.png" alt="" />
+    <img class="hidden" src="img/fold.gif" alt="" />
+    <img class="hidden" src="img/unfold.gif" alt="" />
+    <img class="hidden" src="img/fold-dim.gif" alt="" />
+    <img class="hidden" src="img/nofold-dim.gif" alt="" />
+    <img class="hidden" src="img/unfold-dim.gif" alt="" />
+    <img class="hidden" src="img/bullet-fold.gif" alt="" />
+    <img class="hidden" src="img/bullet-unfold.gif" alt="" />
+    <img class="hidden" src="img/bullet-fold-dim.gif" alt="" />
+    <img class="hidden" src="img/bullet-nofold-dim.gif" alt="" />
+    <img class="hidden" src="img/bullet-unfold-dim.gif" alt="" />
+
+    <img src="img/logo.png" alt="Company logo" class="cover" /><br clear="all" />
+    <h1><img src="img/trac_logo.png"> LShift Trac Plugins - Burndown Chart &amp; Email Digest</h1>
+    <p><a href="http://moshi.lshift.net/LeeWeiYeong">Lee Wei Yeong</a> &lt;<a href=
+    "mailto:leewei@lshift.net">leewei@lshift.net</a>&gt;
+  </div>
+
+  <div class="slide">
+      <h1>Table of contents</h1>
+
+      <h2 class="incremental">Burndown Chart plugin</h2>
+      <ul class="incremental">
+          <li>Project description</li>
+          <li>Objectives</li>
+          <li>Key deliverables</li>
+          <li>Installation &amp; usage</li>
+          <li>Architecture overview</li>
+      </ul>
+      <h2 class="incremental">Email Digest plugin</h2>
+      <ul class="incremental">
+          <li>Project description</li>
+          <li>Current state</li>
+          <li>Objectives</li>
+          <li>Key deliverables</li>
+          <li>Installation &amp; usage</li>
+          <li>Architecture overview</li>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Project description</h1>
+
+      <ul class="incremental">
+        <li>What is a Burndown Chart?</li>
+        <ul class="incremental">
+            <li>chart to visualise progress in milestone</li>
+            <li>for example<br />
+                <img src="http://chart.apis.google.com/chart?chs=800x200&chd=t:0.0,9.09090909091,18.1818181818,27.2727272727,36.3636363636,45.4545454545,54.5454545455,63.6363636364,72.7272727273,81.8181818182,90.9090909091,100.0|81.0,100.0,99.0,100.0,94.4055944056,85.4055944056,72.4055944056,65.4055944056,62.4055944056,43.4055944056,-1,-1&cht=lxy&chxt=x,x,x,y&chxl=0:|15|16|17|18|19|20|21|22|23|24|25|26|1:|9|9|2:|2011|2011&chxr=3,0,143.0&chm=R,f1f1f1,0,0.40909090909,0.59090909091&chg=100.0,100.0,1,0&chco=ff9900&chtt=Current%20Sprint">            
+            </li>
+        </ul>
+        <li>Assigned task</li>
+        <ul>
+            <li>enhance existing <a href="http://trac-hacks.org/wiki/EstimationToolsPlugin#BurndownChart" target="_blank">BurndownChart component</a></li>
+        </ul>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Objectives</h1>
+
+      <ul class="incremental">
+          <li>allow historical recording of time spent</li>
+          <li>allow input / reporting in hours / days for client reporting purposes</li>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Key deliverables</h1>
+
+      <h2 class="incremental">A Trac plugin component, containing modules:</h2>
+      <ul class="incremental">
+          <li>embed</li>
+          <li>inject</li>
+          <li>prefs</li>
+          <li>tooltip</li>
+      </ul>
+      <p class="incremental">...and together with unit tests, of course</p>
+  </div>
+  
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Installation &amp; usage</h1>
+
+      <ol class="incremental">
+          <li><pre>hg clone ssh://hg@hg/trac-burndown-plugin</pre></li>
+          <li><pre>python setup.py {install,test}</pre></li>
+          <li>project uses <a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper</a> / <a href="http://pypi.python.org/pypi/pip">pip</a>, so <pre>requirements.txt</pre></li>
+          <li>Enable <a href="http://trac-hacks.org/wiki/EstimationToolsPlugin#BurndownChart" target="_blank">EstimationToolsPlugin</a> and this component in TracAdmin</li>
+      </ol>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Architecture overview</h1>
+
+      <h2 class="incremental">Embed module</h2>
+      <ul class="incremental">
+          <li>Roadmap<br />
+              <img src="img/roadmap.png">
+          </li>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Architecture overview</h1>
+
+      <h2 class="incremental">Embed module</h2>
+      <ul class="incremental">
+          <li>Milestone<br />
+              <img src="img/milestone.png">
+          </li>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Architecture overview</h1>
+
+      <h2 class="incremental">Inject module</h2>
+      <ul class="incremental">
+          <li>Burndown Chart<br />
+              <img src="img/inject.png">
+          </li>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Architecture overview</h1>
+
+      <h2 class="incremental">Prefs module</h2>
+      <ul class="incremental">
+          <li>Admin panel configuration options<br />
+              <img src="img/prefs.png">
+          </li>
+  </div>
+
+  <div class="slide">
+      <h1>Burndown Chart plugin &gt; Architecture overview</h1>
+
+      <h2 class="incremental">Tooltip module</h2>
+      <ul class="incremental">
+          <li>Tooltip which appears on creating/modifying TracTickets<br />
+              <img src="img/tooltip.png">
+          </li>
+  </div>
+  
+  <!-------------------------------------------------------------------------->
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Project description</h1>
+
+      <ul class="incremental">
+        <li>Assigned task</li>
+        <ul class="incremental">
+            <li>developing a Trac plugin</li>
+            <li>email notification</li>
+            <li>of changes in TracTickets</li>
+            <li>either as a single email</li>
+            <li>or daily digest</li>
+        </ul>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Current state</h1>
+
+      <ul class="incremental">
+        <li><a href="http://trac.edgewall.org/wiki/TracNotification">Default TracNotification</a></li>
+        <li>configured in <a>trac.ini</a></li>
+        <li>generates one email per change in TracTickets</li>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Objectives</h1>
+
+      <ul class="incremental">
+        <li>users should be able to adjust their own settings</li>
+        <li>certain emails to be sent immediately</li>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Key deliverables</h1>
+
+      <h2 class="incremental">A Trac plugin component, containing modules:</h2>
+      <ul class="incremental">
+        <li>NotifyMain</li>
+        <li>ConsumerTask</li>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Installation &amp; usage</h1>
+
+      <h2 class="incremental">Installation</h2>
+      <ul class="incremental">
+        <li>as before, repository @ <a href="ssh://hg@hg/trac-email-digest-plugin">trac-email-digest-plugin</a></li>
+        <li>no unit tests written for this</li>
+        <li>additionally, run <pre>init_rabbitmq-server.sh</pre></li>
+      </ul>
+
+      <h2 class="incremental">Consumer crontask configuration</h2>
+      <ul class="incremental">
+        <li>using <a href="http://trac-hacks.org/wiki/TracCronPlugin">TracCronPlugin</a></li>
+        <li>enable this cronjob</li>
+        <li>understands cron expressions, eg every minute: <pre>* 0/1 * * * ? *</pre></li>
+        <li>plugin uses TracLogging facility</li>
+        <li>minimum resolution = 1 min interval</li>
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Architecture overview</h1>
+
+      <ul class="incremental">
+        <li>deactivates default TracNotification</li>
+        <li>uses amqp-deliver Python library</li>
+        <li>changes are sent as messages, not emails, to rabbitmq-server</li>
+        <li>consumer polls these exchanges-queues for messages</li>
+        <li>emailing according to user-specified policy (tested using Exim MTA)</li>
+        <li>abstracts this task away from Trac</li>
+        <li>compatibility Trac 0.12 onwards</li>
+      </ul>
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Architecture overview</h1>
+
+      <h2>Polling AMQP Consumer crontask configuration</h2>
+      <img src="img/crontask.png">
+  </div>
+  
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Architecture overview</h1>
+
+      <h2>Trac plugin user configuration page</h2>
+      <img src="img/prefpanel.png">
+  </div>
+
+  <div class="slide">
+      <h1>Email Digest plugin &gt; Architecture overview</h1>
+
+      <h2>Sample emails generated</h2>
+      <img src="img/NOW.jpg"><img src="img/LATER.jpg">
+  </div>
+
+  <div class="slide cover">
+    <h1 style="position:absolute;top:45%;left:40%;">More details can be found @ <a href="https://internal-dev.lshift.net/trac/wiki">internal-dev</a></h1>
+  </div>
+
+</body>
+</html>

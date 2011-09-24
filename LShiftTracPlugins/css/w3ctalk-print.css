@@ -1,0 +1,137 @@
+/* Style for printing slides
+ *
+ * Use this style in the all.htm file to define a style for printing.
+ * Add this line to the HEAD:
+ *
+ *   <link href="../Tools/w3ctalk-print.css" rel="stylesheet" type="text/css"
+ *     media="print">
+ *
+ * Author: Bert Bos
+ * Created: 14 Feb 2001
+ * Version: $Id: w3ctalk-print.css,v 1.12 2010/05/03 22:28:27 bbos Exp $
+ */
+@page {
+  margin: 1.5cm;
+}
+
+html {
+  margin: 0;
+}
+body {
+  background: white;
+  color: black;
+  font: 14pt/1.2 sans-serif;
+  margin: 0 0 0 90px;  /* Room for logo */
+}
+h1 {
+  page-break-before: always;
+  padding-bottom: 0.5em;
+  border-bottom: thin solid;
+  margin-top: 0;
+  clear: both;
+}
+h1:first-child {page-break-before: auto}
+
+@media screen, print {
+  h1 {
+    counter-increment: h1;
+  }
+  h1::before {
+    content: "slide " counter(h1);
+    display: block;
+    font-size: 0.4em;
+    text-align: right;
+    color: #999;
+    color: white;
+    background: black;
+    padding: 0.2em;
+    margin: 0 0 1em 0;
+  }
+}
+
+p.letterhead {			/* For W3C logo in upper left corner */
+  position: fixed;
+  left: 0;
+  top: 1.5cm;
+  margin: 0;
+}
+p.signature {			/* For name of author */
+  display: none;
+}
+div.comment {
+  font: 10pt/1.2 sans-serif;
+  padding: 1em;
+  border: thin dotted;
+  margin: 3em 0;
+  text-align: justify;
+  clear: both;
+  /*column-count: 2;*/
+  /*column-gap: 2em;*/
+}
+div.comment p + p {
+  text-indent: 1em;
+}
+div.comment p {
+  margin: 0;
+}
+div.comment h2, div.comment h3 {
+  font-size: 100%
+}
+img {
+  border: none;
+}
+pre {
+  text-align: left;
+}
+pre span.keyword, code span.keyword {
+  color: #909;
+}
+pre span.comment, code span.comment {
+  color: #990;
+}
+pre span.string, code span.string {
+  color: #090;
+}
+pre span.dim, code span.dim {
+  color: #999;
+}
+pre.extensive, pre.compact { 
+  font-size: 80%;
+  line-height: 1;
+}
+
+/* div.callout is used in b5.css for something that needs extra attention */
+div.callout {
+  clear: both;
+  margin: 1em 0;
+  border: solid #0c479d;
+  padding: 0.5em;
+  background: #ADE;
+}
+div.callout > *:first-child {
+  margin-top: 0;
+}
+
+/* div.sidebar is used in b5.css for a box on the right */
+div.sidebar {
+  float: right;
+  clear: right;
+  width: 30%;
+  margin: 0 0 0.5em 1em;
+  border: solid #ADE;
+  padding: 0.5em;
+  background: #ADE;
+}
+div.sidebar > *:first-child {
+  margin-top: 0;
+}
+
+/* Classes to suppress elements: .hide (always) .no-print (media=print) */
+.hide, .no-print {
+  display: none;
+}
+
+/* p.progress shows how far along in the talk a slide is, see, e.g., b5.css */
+@media braille, embossed, handheld, print, screen, speech, tty, tv {
+  p.progress {display: none}
+}
