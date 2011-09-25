@@ -1,0 +1,21 @@
+ * Contents (font-family: "Helvetica Neue"; color: #fff; background-color: rgb(0,153,204))
+   - Introduction
+   {{{
+   LShift is a hi-tech software development company. It is small but, we like to think, close to perfectly formed. Our company is home to some of the best developers in the UK - not only in our opinion, but in the opinion of a number of international blue chip companies who use our development and research skills.
+   The key to our business is simple. We create an environment that allows the best developers and engineers to work in a way which unlocks their creative potential, then we recruit the best minds we can find to work in that environment.
+   }}}
+   - foreach (Project p : ps) {
+        - goals
+        - ideas
+        - problems
+        - outcomes
+        (? people)
+     }
+    {{{
+     1. Lee Wei joined the project near its end and was mainly involved in fixing various bugs that were reported from the end user. The project was a clinical and legal information system powered by ASP.NET on IIS.
+     2. CIFFCO website  (Eurotunnel) Involved modifications to design templates of a current site using the Ektron Content Management System (CMS). 
+     3. Data Integration and Analysis Applications and Services. Aim is to provide a secure, automated mechanism for transferring account statement data from a high street bank to online accounting services ("partners"), as indicated and authorised by the account holder via a web portal. This makes use of the "Rabbit" system.
+     4.  He is currently working on an internal project developing plugins for the tracking system.
+     Likely there will be a project 5!
+    }}}
+   - Conclusion: lessons learnt & experience gained
