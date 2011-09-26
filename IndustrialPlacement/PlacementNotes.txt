@@ -1,4 +1,3 @@
- * Contents (font-family: "Helvetica Neue"; color: #fff; background-color: rgb(0,153,204))
    - Introduction
    {{{
    LShift is a hi-tech software development company. It is small but, we like to think, close to perfectly formed. Our company is home to some of the best developers in the UK - not only in our opinion, but in the opinion of a number of international blue chip companies who use our development and research skills.

@@ -816,6 +816,7 @@ var w3c_slidy = {
        left.appendChild(gap1);
 
        var contents = this.create_element("a");
+       contents.setAttribute("id", "contents");
        contents.setAttribute("class", "toolbar-icon");
        contents.setAttribute("href", "javascript:w3c_slidy.toggle_table_of_contents()");
        contents.setAttribute("title", this.localize("table of contents"));
@@ -823,11 +824,13 @@ var w3c_slidy = {
        left.appendChild(contents);
 
        var viewSource = this.create_element("a");
+       viewSource.setAttribute("id", "view-source");
        viewSource.setAttribute("class", "toolbar-icon");
        viewSource.setAttribute("href", "javascript:w3c_slidy.view_source()");
        viewSource.setAttribute("title", this.localize("view slide source"));
        viewSource.innerHTML = "&#x270f;";
-       left.appendChild(viewSource);
+       /* DISABLED */
+       //left.appendChild(viewSource);
 
        var gap2 = document.createTextNode(" ");
        /* DISABLED */
@@ -892,6 +895,7 @@ var w3c_slidy = {
        this.toolbar.appendChild(gap1);
 
        var contents = this.create_element("a");
+       contents.setAttribute("id", "contents");
        contents.setAttribute("class", "toolbar-icon");
        contents.setAttribute("href", "javascript:toggleTableOfContents()");
        contents.setAttribute("title", this.localize("table of contents".localize));
@@ -899,11 +903,13 @@ var w3c_slidy = {
        this.toolbar.appendChild(contents);
 
        var viewSource = this.create_element("a");
+       viewSource.setAttribute("id", "view-source");
        viewSource.setAttribute("class", "toolbar-icon");
        viewSource.setAttribute("href", "javascript:w3c_slidy.view_source()");
        viewSource.setAttribute("title", this.localize("view slide source"));
        viewSource.innerHTML = "&#x270f;";
-       this.toolbar.appendChild(viewSource);
+       /* DISABLED */
+       //this.toolbar.appendChild(viewSource);
 
        var gap2 = document.createTextNode(" ");
        /* DISABLED */

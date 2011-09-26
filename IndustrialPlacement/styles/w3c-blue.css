@@ -461,9 +461,9 @@ div.slide.cover a {
 }
 
 div.slide.cover a:visited { color: white }
-div.slide.cover a:link { color: white }
-div.slide.cover a:hover { color: yellow; text-decoration: underline }
-div.slide.cover a:active { color: yellow; text-decoration: underline }
+div.slide.cover a:link    { color: white }
+div.slide.cover a:hover   { color: yellow; text-decoration: underline }
+div.slide.cover a:active  { color: yellow; text-decoration: underline }
 
 div.slide.cover a:hover, div.slide.cover a:active {
   color: yellow; text-decoration: underline;
