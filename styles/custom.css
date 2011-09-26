@@ -1,0 +1,127 @@
+/* additional styles */
+div.slide.tiny {
+    font-size: 100%;
+}
+div.slide.small {
+    font-size: 120%;
+}
+div.slide.cover,
+div.slide.normal {
+    font-size: 160%;
+}
+div.slide.large {
+    font-size: 200%;
+}
+
+body {
+    overflow: hidden;
+}
+img {
+    vertical-align: middle;
+}
+
+div#toolbar-right {
+    position: relative;
+    top: 0.2em;
+}
+a.toolbar-icon#view-source {
+    position: relative;
+    top: -.1em;
+}
+
+font.project-text {
+   color: rgb(54,95,145);
+}
+
+/* modified slidy.css */
+div.slide h1 {
+    color: white !important;
+}
+div.slide.cover a {
+    color: cyan !important;     
+}
+div.slide:not(.title) a {
+    color: navy;
+    font-size: 100% !important;
+}
+div.slidy_toc a {
+    color: rgb(0, 153, 204) !important;
+}
+a.toolbar-icon {
+    color: rgb(0, 153, 204) !important;
+    font-size: 1.5em;
+}
+div.slide a:hover,
+a.toolbar-icon:hover {
+    color: #f26722 !important;
+    text-decoration: none !important;
+}
+
+div.slide:not(.title) :not(h1) {
+    font-size: 120%;
+}
+div.slide:not(.title) h2 {
+    font-size: 180%;
+}
+div.slide:not(.title) ul > li {
+    font-size: 160% !important;
+}
+
+
+ /* overrides */
+body {
+    font-family: "Helvetica Neue" !important;
+    color: rgb(0, 153, 204) !important;
+    font-size: 18pt !important;
+}
+div.toolbar {
+   height: 1.5em !important;
+   background-color: rgb(236, 239, 239) !important;
+}
+div.toolbar span.copyright {
+    color: rgb(0, 153, 204) !important;
+    position: relative;
+    top: -0.4em;
+}
+div.slidy_toc {
+    left: 2em   !important;
+    bottom: 2em !important;
+}
+
+/* modified w3c-blue.css */
+div.slide h1 {
+    padding-left: 1.2em;
+    padding-top: 0.8em;
+    color: inherit;
+}
+
+#head-logo {
+    background: transparent !important;
+}
+#head-logo-fallback {
+    width: 400px;
+    height: 100px;
+    position: relative;
+    top: 11.5px;
+}
+
+a:visited { color: cyan }
+a:link { color: cyan }
+div.slide.cover a:visited { color: inherit }
+div.slide.cover a:link    { color: inherit }
+
+ul li {
+    background-position: 5px .5em;
+}
+li li {
+    font-style: normal !important;
+}
+
+div.background {
+    background-color: #333 !important;
+}
+
+div.slide.cover {
+    color: rgb(0, 153, 204) !important;
+    background-color: #333  !important;
+}
