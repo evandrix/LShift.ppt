@@ -7,7 +7,7 @@
   <title>HTML Slidy Presentation</title>
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="copyright" content="Copyright © 2000-11 LShift Ltd" />
+  <meta name="copyright" content="Copyright © 2000-11 LShift Ltd '<i>technology from back to front</i>'" />
   <meta name="duration"  content="12" />
   <meta name="font-size-adjustment" content="2" />
   <link rel="stylesheet" href="styles/slidy.css" type="text/css" />
@@ -19,7 +19,6 @@
 
 <body>
     <div class="background">
-      <img alt="" id="head-icon" src="" name="head-icon" />
       <object id="head-logo" data="graphics/logo.svg" type="image/svg+xml" title="logo">
       <a href="http://www.lshift.net">
           <img alt="logo" id="head-logo-fallback" src="graphics/logo.png" name="head-logo-fallback" />
@@ -27,7 +26,11 @@
       </object>
     </div>
 
-    <div class="slide cover title">
+    <div class="watermark" style="position:absolute;top:96px;right:-2px;">
+        <img src="graphics/watermark.png" alt="watermark"/>
+    </div>
+
+    <div class="slide cover title" style="padding-left:0;">
       <!-- hidden style graphics to ensure they are saved with other content -->
       <img class="hidden" src="img/bullet.png" alt="" />
       <img class="hidden" src="img/fold.gif" alt="" />
@@ -42,21 +45,289 @@
       <img class="hidden" src="img/bullet-unfold-dim.gif" alt="" />
 
       <div style="position:relative;top:35%;">
-      <center><img src="graphics/logo.png" align="middle" style="vertical-align:middle">
-      <p><a href="mailto:evandrix@gmail.com">Lee Wei Yeong</a> (00466635 / lwy08)
+      <center>
+          <img src="graphics/logo.png" align="middle" style="vertical-align:middle">
+          <p><a href="mailto:evandrix@gmail.com">Lee Wei Yeong</a>
       </center>
       </div>
     </div>
 
-    <div class="slide">
-        <h1>Table of contents</h1>
+    <div class="slide watermark">
+        <h1>Agenda</h1>
 
         <ul class="incremental">
             <li>Introduction</li>
-            <li><h2 class="incremental"></h2></li>
+            <li>Projects</li>
+                <ol class="incremental">
+                    <li>Project Daylight</li>
+                    <li>DIAAS</li>
+                    <li>CIFFCO website</li>
+                    <li>Trac plugins</li>
+                    <li>Buongiorno</li>
+                    <li>ABR Gapfill verification tool</li>
+                </ol>
             <li>Conclusion</li>
         </ul>
     </div>
 
+    <div class="slide watermark">
+        <h1>Introduction</h1>
+
+        <h2 class="incremental">define:LShift</h2>
+        <ul class="incremental">
+            <li>small hi-tech software development company</li>
+            <li>some of the best UK developers</li>
+            <li>creative work environment<li>
+            <li>now recruiting!</li>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>Project Daylight</h1>
+
+        <h2 class="incremental">
+            <img src="graphics/logo_daylight.png" />
+        </h2>
+        <ul class="incremental">
+            <li>goal: <font class="project-text">clinical and legal information system</font></li>
+            <li>description: <font class="project-text">C#/ASP.net MVC web application hosted on IIS</font></li>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>Project Daylight &gt; involvement</h1>
+
+        <ul class="incremental">
+            <li>end of Phase 3 milestone</li>
+            <li>assigned task</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">QA - functional unit testing via Selenium</font></li>
+                </ol>
+
+            <li>problem: <font class="project-text">tests not future-proof nor sufficiently robust</font></li>
+            <ol class="incremental" style="font-size:100%;">
+                <li>solution: <font class="project-text">initially use XPath &amp; variables, later port Selenium to C#</font></li>
+            </ol>
+
+            <li>problem: <font class="project-text">user experience not ideal</font></li>
+            <ol class="incremental" style="font-size:100%;">
+                <li>solution: <font class="project-text">improved by fixing inconsistencies &amp; other usability issues</font></li>
+            </ol>
+
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>DIAAS</h1>
+
+        <ul class="incremental">
+            <li><u>D</u>ata <u>I</u>ntegration and <u>A</u>nalysis <u>A</u>pplications and <u>S</u>ervices</li>
+            <li>goal:</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">secure, automated mechanism</font></li>
+                    <li><font class="project-text">for transferring bank account statements</font></li>
+                    <li><font class="project-text">to accounting partners</font></li>
+                </ol>
+            <li>description:</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">authorisation via web portal</font></li>
+                    <li><font class="project-text">encrypted statement transport</font></li>
+                    <li><font class="project-text">RabbitMQ messaging infrastructure</font></li>
+                    <li><font class="project-text">target deployment on RHEL</font></li>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>DIAAS &gt; involvement</h1>
+
+        <h2 class="incremental">
+            <img src="graphics/diaas_involvement.png" style="width:910px;height:270px;" />
+        </h2>
+        <ul class="incremental">
+            <li>problem: <font class="project-text">sensitive data</font></li>
+            <ol class="incremental" style="font-size:100%;">
+                <li>solution: <font class="project-text">Mock data (my contribution), cryptographic library, UAT</font></li>
+            </ol>
+
+            <li>problem: <font class="project-text">RHEL is commercial</font></li>
+            <ol class="incremental" style="font-size:100%;">
+                <li>solution: <font class="project-text">deploy as RPMs on CentOS VM (my contribution), UAT</font></li>
+            </ol>
+
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>DIAAS &gt; involvement</h1>
+
+        <h2>
+            <img src="graphics/diaas_involvement.png" style="width:910px;height:270px;" />
+        </h2>
+        <ul class="incremental">
+            <li>problem: <font class="project-text">expected high volume daily traffic</font></li>
+            <ol class="incremental" style="font-size:100%;">
+                <li>solution: <font class="project-text">RabbitMQ</font></li>
+            </ol>
+
+            <li>problem: <font class="project-text">web portal required for authorisation</font></li>
+            <ol class="incremental" style="font-size:100%;">
+                <li>solution: <font class="project-text">initially my tomcat webapp, later Magnolia CMS</font></li>
+            </ol>
+
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>CIFFCO website</h1>
+
+        <h2 class="incremental">
+            <img src="graphics/logo_et.jpg" style="width:200px;height:200px;" />
+        </h2>
+        <ul class="incremental">
+            <li><u>C</u>entre <u>I</u>nternational de <u>F</u>ormation <u>F</u>erroviaire de la <u>C</u>ôte d’<u>O</u>pale</li>
+            <li>goal:</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">modify website design templates and smart forms</font></li>
+                    <li><font class="project-text">from Eurotunnel's live 'Corporate' site</font></li>
+                    <li><font class="project-text">using Ektron Content Management System (CMS)</font></li>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>CIFFCO website &gt; involvement</h1>
+        <h2>Before</h2>
+        <img src="graphics/ciffco_work_1.png" style="width:50%;float:left;" />
+        <img src="graphics/ciffco_work_2.png" style="width:50%;float:right;" />
+    </div>
+
+    <div class="slide watermark">
+        <h1>CIFFCO website &gt; involvement</h1>
+        <h2>
+            After
+            <img src="graphics/ciffco_after.png" style="margin-top:.1em;" />
+        </h2>
+    </div>
+
+    <div class="slide watermark">
+        <h1>Trac plugins</h1>
+
+        <h2 class="incremental">
+            <img src="graphics/logo_trac.png" />
+        </h2>
+        <ul class="incremental">
+            <li>goal: <font class="project-text">2 plugins</font></li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li style="background:none;"><font class="project-text">Burndown Chart</font>
+                    <img src="graphics/trac_burndown_chart.png" /></li>
+                    <li style="background:none;"><font class="project-text">Email Digest</font>
+                    <img src="graphics/trac_email_digest.png" /></li>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>Trac plugins &gt; Burndown Chart</h1>
+
+        <ul class="incremental">
+            <li>define:Burndown Chart</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">chart to visualise progress in a milestone</font></li>
+                </ol>
+            <li>assigned task</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">enhance existing <a href="http://trac-hacks.org/wiki/EstimationToolsPlugin#BurndownChart">BurndownChart component</a></font></li>
+                </ol>
+            <li>objectives</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">allow historical recording of time spent</font></li>
+                    <li><font class="project-text">allow input / reporting in hours / days for client reporting purposes</font></li>
+                </ol>
+        </ul>
+    </div>
+    
+    <div class="slide watermark">
+        <h1>Trac plugins &gt; Email digest</h1>
+
+        <ul class="incremental">
+            <li>current state</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">one email per change in Trac tickets</font></li>
+                </ol>
+            <li>assigned task</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">multiple changes per email</font></li>
+                    <li><font class="project-text">important ones sent individually</font></li>
+                    <li><font class="project-text">user can configure own settings</font></li>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>Buongiorno</h1>
+
+        <h2 class="incremental">
+            <img src="graphics/logo_buongiorno.jpg" style="width:385px;height:234px;" />
+            <span class="incremental">Italian mobile content provider</span>
+        </h2>
+        <ul class="incremental">
+            <li>goal:</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">Japanese language detection</font></li>
+                    <li><font class="project-text">keyword extraction</font></li>
+                </ol>
+            <li>assigned task</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">scrape &amp; process data from:</font></li>
+                    <ol class="incremental" style="font-size:100%;">
+                        <li><font class="project-text">Wikipedia</font></li>
+                        <li><font class="project-text">Twitter</font></li>
+                        <li><font class="project-text">RSS news feeds</font></li>
+                    </ol>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>ABR Gapfill verification tool</h1>
+
+        <h2 class="incremental">
+            <img src="graphics/logo_cii.png" style="width:404px;height:196px;" />
+        </h2>
+        <ul class="incremental">
+            <li>goal: <font class="project-text">certification for Financial Service Advisors</font></li>
+            <li>description: <font class="project-text">C#/ASP.net MVC web application hosted on IIS</font></li>
+            <li>assigned task</li>
+                <ol class="incremental" style="font-size:100%;">
+                    <li><font class="project-text">console C# tool</font></li>
+                    <li><font class="project-text">email notification of application outcome &amp; next steps</font></li>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="slide watermark">
+        <h1>Conclusion</h1>
+
+        <h2 class="incremental">lessons learnt</h2>
+        <ul class="incremental">
+            <li>Test driven development</li>
+            <li>Debug logging</li>
+            <li>Proper documentation</li>
+            <li>Code simplicity &amp; correctness</li>
+        </ul>
+
+        <h2 class="incremental">experience gained</h2>
+        <ul class="incremental">
+            <li>Distributed VCS</li>
+            <li>Managing project risks</li>
+            <li>Client relationship</li>
+            <li>Confidentiality</li>
+        </ul>
+    </div>
+    
+    <div class="slide cover">
+      <h1 style="position:absolute;top:45%;left:40%;">Questions?</h1>
+    </div>
 </body>
 </html>

@@ -8,7 +8,6 @@
         - ideas
         - problems
         - outcomes
-        (? people)
      }
     {{{
      1. Lee Wei joined the project near its end and was mainly involved in fixing various bugs that were reported from the end user. The project was a clinical and legal information system powered by ASP.NET on IIS.

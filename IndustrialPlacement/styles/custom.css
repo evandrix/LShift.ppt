@@ -1,4 +1,25 @@
 /* additional styles */
+div.slide.tiny {
+    font-size: 100%;
+}
+div.slide.small {
+    font-size: 120%;
+}
+div.slide.cover,
+div.slide.normal {
+    font-size: 160%;
+}
+div.slide.large {
+    font-size: 200%;
+}
+
+body {
+    overflow: hidden;
+}
+img {
+    vertical-align: middle;
+}
+
 div#toolbar-right {
     position: relative;
     top: 0.2em;
@@ -6,6 +27,10 @@ div#toolbar-right {
 a.toolbar-icon#view-source {
     position: relative;
     top: -.1em;
+}
+
+font.project-text {
+   color: rgb(54,95,145);
 }
 
 /* modified slidy.css */
@@ -31,23 +56,23 @@ a.toolbar-icon:hover {
     color: #f26722 !important;
     text-decoration: none !important;
 }
-div.slide.cover {
-    font-size: 120%;
-}
+
 div.slide:not(.title) :not(h1) {
     font-size: 120%;
 }
-div.slide:not(.title) img {
-    margin-left: 1.5em;
+div.slide:not(.title) h2 {
+    font-size: 180%;
 }
+div.slide:not(.title) ul > li {
+    font-size: 160% !important;
+}
+
 
  /* overrides */
 body {
-    /* font-family: "Helvetica Neue"; color: #fff; background-color: rgb(0,153,204); */
     font-family: "Helvetica Neue" !important;
     color: rgb(0, 153, 204) !important;
     font-size: 18pt !important;
-   
 }
 div.toolbar {
    height: 1.5em !important;
@@ -86,7 +111,10 @@ div.slide.cover a:visited { color: inherit }
 div.slide.cover a:link    { color: inherit }
 
 ul li {
-    background-position: 5px .45em;
+    background-position: 5px .5em;
+}
+li li {
+    font-style: normal !important;
 }
 
 div.background {
