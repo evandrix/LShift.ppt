@@ -314,44 +314,44 @@ ol.outline ol { list-style-type:lower-alpha }
 
 ol.outline li.nofold {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/nofold-dim.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/nofold-dim.gif) no-repeat 0px 0.5em;
 }
 ol.outline li.unfolded {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold-dim.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/fold-dim.gif) no-repeat 0px 0.5em;
 }
 ol.outline li.folded {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold-dim.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/unfold-dim.gif) no-repeat 0px 0.5em;
 }
 ol.outline li.unfolded:hover {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/fold.gif) no-repeat 0px 0.5em;
 }
 ol.outline li.folded:hover {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/unfold.gif) no-repeat 0px 0.5em;
 }
 
 ul.outline li.nofold {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/nofold-dim.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/nofold-dim.gif) no-repeat 0px 0.5em;
 }
 ul.outline li.unfolded {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold-dim.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/fold-dim.gif) no-repeat 0px 0.5em;
 }
 ul.outline li.folded {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold-dim.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/unfold-dim.gif) no-repeat 0px 0.5em;
 }
 ul.outline li.unfolded:hover {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/fold.gif) no-repeat 0px 0.5em;
 }
 ul.outline li.folded:hover {
   padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold.gif) no-repeat 0px 0.5em;
+  background: transparent url(../img/unfold.gif) no-repeat 0px 0.5em;
 }
 
 /* for slides with class "title" in table of contents */
